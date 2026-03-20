@@ -228,7 +228,7 @@ function openBafsGame() {
 
     // Initial View
     dailyContainer.innerHTML = `
-        <div class="chem-welcome" style="background: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%);">
+        <div class="chem-welcome">
             <h3>BAFS Zone 📊</h3>
             <p>Master your business concepts!</p>
             <div class="chem-icons">📈 💰 📉</div>

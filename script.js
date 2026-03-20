@@ -227,7 +227,13 @@ const encouragementMessages = [
     '堅持夢想，永不放棄！🌈',
     '你嘅未來，由你創造！✨',
     '每一步都係向成功靠近！🚶',
-    '保持積極，好運自然來！🍀'
+    '保持積極，好運自然來！🍀',
+    '攰就休息一陣，返嚟再戰。',
+    '今日專注一小時，已經好叻。',
+    '考試靠累積：10 分鐘都算數。',
+    '慢慢嚟，唔會遲；你係行緊路。',
+    '吸一口氣，寫低下一步要做乜。',
+    '你唔係一個人，大家都喺度努力。'
 ];
 
 // Get core subjects (cannot be deselected)
@@ -428,6 +434,24 @@ function formatDate(date) {
     return `${year}年${month}月${day}日 ${hours}:${minutes}`;
 }
 
+function updateTextWithTick(el, value) {
+    if (!el) return;
+
+    const nextText = String(value);
+    if (el.textContent === nextText) return;
+
+    el.textContent = nextText;
+
+    // Restart animation reliably
+    el.classList.remove('countdown-tick');
+    void el.offsetWidth;
+    el.classList.add('countdown-tick');
+
+    window.setTimeout(() => {
+        el.classList.remove('countdown-tick');
+    }, 170);
+}
+
 // Create countdown card for a paper
 function createCountdownCard(subjectKey, paper) {
     const card = document.createElement('div');
@@ -439,8 +463,16 @@ function createCountdownCard(subjectKey, paper) {
     if (isPast) {
         card.classList.add('past');
     }
+
+    const toggleMaximize = () => {
+        const isMaximized = card.classList.toggle('maximized');
+        document.body.style.overflow = isMaximized ? 'hidden' : 'auto';
+        maxBtn.innerHTML = isMaximized ? '✖' : '⛶';
+        maxBtn.title = isMaximized ? 'Minimize' : 'Maximize';
+    };
     
     card.innerHTML = `
+        <button class="maximize-btn" title="Maximize">⛶</button>
         <div class="card-header">
             <h3 class="subject-name">${dseExams[subjectKey].name}</h3>
             <p class="paper-name">${paper.paper}</p>
@@ -466,9 +498,15 @@ function createCountdownCard(subjectKey, paper) {
             </div>
             `}
         </div>
-        ${subjectKey === 'chemistry' ? `<button class="chem-practice-btn" onclick="openChemGame()">🧪 Practice Chemistry</button>` : ''}
-        ${subjectKey === 'bafs' ? `<button class="bafs-practice-btn" onclick="openBafsGame()">📊 Practice BAFS</button>` : ''}
+        ${subjectKey === 'chemistry' ? `<button class="chem-practice-btn" onclick="openChemGame(event)">🧪 Practice Chemistry</button>` : ''}
+        ${subjectKey === 'bafs' ? `<button class="bafs-practice-btn" onclick="openBafsGame(event)">📊 Practice BAFS</button>` : ''}
     `;
+    
+    const maxBtn = card.querySelector('.maximize-btn');
+    maxBtn.onclick = (e) => {
+        e.stopPropagation();
+        toggleMaximize();
+    };
     
     return card;
 }
@@ -544,11 +582,11 @@ function updateCountdowns() {
         const hoursEl = display.querySelector('.hours');
         const minutesEl = display.querySelector('.minutes');
         const secondsEl = display.querySelector('.seconds');
-        
-        if (daysEl) daysEl.textContent = timeRemaining.days;
-        if (hoursEl) hoursEl.textContent = timeRemaining.hours;
-        if (minutesEl) minutesEl.textContent = timeRemaining.minutes;
-        if (secondsEl) secondsEl.textContent = timeRemaining.seconds;
+
+        updateTextWithTick(daysEl, timeRemaining.days);
+        updateTextWithTick(hoursEl, timeRemaining.hours);
+        updateTextWithTick(minutesEl, timeRemaining.minutes);
+        updateTextWithTick(secondsEl, timeRemaining.seconds);
     });
 }
 
@@ -700,11 +738,11 @@ function updateHeroCountdown() {
     const hoursEl = heroDisplay.querySelector('.hero-hours');
     const minutesEl = heroDisplay.querySelector('.hero-minutes');
     const secondsEl = heroDisplay.querySelector('.hero-seconds');
-    
-    if (daysEl) daysEl.textContent = timeRemaining.days;
-    if (hoursEl) hoursEl.textContent = timeRemaining.hours;
-    if (minutesEl) minutesEl.textContent = timeRemaining.minutes;
-    if (secondsEl) secondsEl.textContent = timeRemaining.seconds;
+
+    updateTextWithTick(daysEl, timeRemaining.days);
+    updateTextWithTick(hoursEl, timeRemaining.hours);
+    updateTextWithTick(minutesEl, timeRemaining.minutes);
+    updateTextWithTick(secondsEl, timeRemaining.seconds);
 }
 
 // Freedom Countdown Logic
@@ -790,11 +828,11 @@ function updateFreedomCountdown() {
     const hoursEl = display.querySelector('.freedom-hours');
     const minutesEl = display.querySelector('.freedom-minutes');
     const secondsEl = display.querySelector('.freedom-seconds');
-    
-    if (daysEl) daysEl.textContent = timeRemaining.days;
-    if (hoursEl) hoursEl.textContent = timeRemaining.hours;
-    if (minutesEl) minutesEl.textContent = timeRemaining.minutes;
-    if (secondsEl) secondsEl.textContent = timeRemaining.seconds;
+
+    updateTextWithTick(daysEl, timeRemaining.days);
+    updateTextWithTick(hoursEl, timeRemaining.hours);
+    updateTextWithTick(minutesEl, timeRemaining.minutes);
+    updateTextWithTick(secondsEl, timeRemaining.seconds);
 }
 
 // DSE 12 Prescribed Texts
