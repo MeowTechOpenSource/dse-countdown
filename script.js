@@ -453,7 +453,7 @@ function updateTextWithTick(el, value) {
 }
 
 // Create countdown card for a paper
-function createCountdownCard(subjectKey, paper) {
+function createCountdownCard(subjectKey, paper, index) {
     const card = document.createElement('div');
     card.className = 'countdown-card';
     
@@ -463,6 +463,9 @@ function createCountdownCard(subjectKey, paper) {
     if (isPast) {
         card.classList.add('past');
     }
+
+    // Stagger entrance animation
+    card.style.animationDelay = `${index * 60}ms`;
 
     const toggleMaximize = () => {
         const isMaximized = card.classList.toggle('maximized');
@@ -479,7 +482,7 @@ function createCountdownCard(subjectKey, paper) {
         </div>
         <div class="exam-date">${formatDate(paper.date)}</div>
         <div class="countdown-display" data-end="${paper.date.toISOString()}">
-            ${isPast ? '<div class="exam-done">考試已完成 ✓</div>' : `
+            ${isPast ? buildExamDoneHTML() : `
             <div class="time-unit">
                 <span class="time-value days">${timeRemaining.days}</span>
                 <span class="time-label">日</span>
@@ -501,6 +504,10 @@ function createCountdownCard(subjectKey, paper) {
         ${subjectKey === 'chemistry' ? `<button class="chem-practice-btn" onclick="openChemGame(event)">🧪 Practice Chemistry</button>` : ''}
         ${subjectKey === 'bafs' ? `<button class="bafs-practice-btn" onclick="openBafsGame(event)">📊 Practice BAFS</button>` : ''}
     `;
+
+    if (isPast) {
+        spawnConfetti(card);
+    }
     
     const maxBtn = card.querySelector('.maximize-btn');
     maxBtn.onclick = (e) => {
@@ -550,8 +557,8 @@ function updateCountdownDisplay() {
         return;
     }
     
-    allPapers.forEach(({ subjectKey, paper }) => {
-        const card = createCountdownCard(subjectKey, paper);
+    allPapers.forEach(({ subjectKey, paper }, idx) => {
+        const card = createCountdownCard(subjectKey, paper, idx);
         container.appendChild(card);
     });
 }
@@ -570,8 +577,10 @@ function updateCountdowns() {
         
         if (timeRemaining.isPast) {
             if (!display.innerHTML.includes('exam-done')) {
-                display.innerHTML = '<div class="exam-done">考試已完成 ✓</div>';
-                display.parentElement.classList.add('past');
+                display.innerHTML = buildExamDoneHTML();
+                const card = display.parentElement;
+                card.classList.add('past');
+                spawnConfetti(card);
                 // Re-evaluate hero if current hero becomes past
                 createHeroCountdown();
             }
@@ -590,16 +599,51 @@ function updateCountdowns() {
     });
 }
 
+// Build rich finished-exam HTML
+function buildExamDoneHTML() {
+    return `
+        <div class="exam-done">
+            <div class="confetti-container"></div>
+            <div class="exam-done-badge">
+                <span class="exam-done-emoji">🎉</span>
+                考試已完成 Done!
+            </div>
+            <div class="exam-done-stars">
+                <span>⭐</span><span>⭐</span><span>⭐</span>
+            </div>
+        </div>`;
+}
+
+// Spawn CSS confetti particles inside a card
+const CONFETTI_COLORS = ['#68d391','#4299e1','#f6ad55','#fc8181','#b794f4','#76e4f7'];
+function spawnConfetti(card) {
+    const container = card.querySelector('.confetti-container');
+    if (!container) return;
+    const count = 14;
+    for (let i = 0; i < count; i++) {
+        const piece = document.createElement('div');
+        piece.className = 'confetti-piece';
+        piece.style.left = `${Math.random() * 90 + 5}%`;
+        piece.style.background = CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)];
+        piece.style.animationDelay = `${Math.random() * 0.5}s`;
+        piece.style.animationDuration = `${1.1 + Math.random() * 0.7}s`;
+        piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+        container.appendChild(piece);
+        // Remove after animation ends to keep DOM clean
+        piece.addEventListener('animationend', () => piece.remove(), { once: true });
+    }
+}
+
 // Rotate encouragement messages
 function rotateEncouragement() {
     const textEl = document.getElementById('encouragementText');
     const randomMessage = encouragementMessages[Math.floor(Math.random() * encouragementMessages.length)];
-    textEl.style.opacity = '0';
-    
+
+    textEl.classList.add('fade-out');
     setTimeout(() => {
         textEl.textContent = randomMessage;
-        textEl.style.opacity = '1';
-    }, 300);
+        textEl.classList.remove('fade-out');
+    }, 350);
 }
 
 // Initialize the app
