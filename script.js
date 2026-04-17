@@ -1,5 +1,5 @@
 // DSE 2026 exam schedule (Official timetable revised on 31 October 2025)
-const dseExams = {
+const DSE_EXAMS_2026 = {
     'visual_arts': {
         name: 'Visual Arts 視覺藝術',
         englishName: 'Visual Arts',
@@ -196,6 +196,267 @@ const dseExams = {
     }
 };
 
+// DSE 2027 Predicted Exam Schedule (Based on 2025 DSE timetable)
+const DSE_EXAMS_2027 = {
+    'visual_arts': {
+        name: 'Visual Arts 視覺藝術',
+        englishName: 'Visual Arts',
+        papers: [
+            { paper: '卷一及卷二', date: new Date('2027-04-01T08:30:00') }
+        ]
+    },
+    'chinese': {
+        name: '中國語文',
+        englishName: 'Chinese Language',
+        isCore: true,
+        papers: [
+            { paper: 'Chinese Language 1 中國語文（一）', date: new Date('2027-04-02T08:30:00') },
+            { paper: 'Chinese Language 2 中國語文（二）', date: new Date('2027-04-02T10:45:00') }
+        ]
+    },
+    'english': {
+        name: 'English Language 英國語文',
+        englishName: 'English Language',
+        isCore: true,
+        papers: [
+            { paper: 'English Language 1 & 2 英國語文（一）及（二）', date: new Date('2027-04-03T08:30:00') },
+            { paper: 'English Language 3 (Listening) 英國語文（三）（聆聽及綜合能力考核）', date: new Date('2027-04-05T09:15:00') }
+        ]
+    },
+    'maths': {
+        name: 'Mathematics 數學（必修部分）',
+        englishName: 'Mathematics',
+        isCore: true,
+        papers: [
+            { paper: 'Mathematics Compulsory Part 數學必修部分', date: new Date('2027-04-07T08:30:00') }
+        ]
+    },
+    'cs': {
+        name: 'Citizenship and Social Development 公民與社會發展',
+        englishName: 'Citizenship and Social Development',
+        isCore: true,
+        papers: [
+            { paper: 'Citizenship and Social Development 公民與社會發展', date: new Date('2027-04-08T08:30:00') }
+        ]
+    },
+    'ethics': {
+        name: 'Ethics & Religious Studies 倫理與宗教',
+        englishName: 'Ethics & Religious Studies',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-09T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-09T11:00:00') }
+        ]
+    },
+    'chemistry': {
+        name: 'Chemistry 化學',
+        englishName: 'Chemistry',
+        papers: [
+            { paper: 'Chemistry 1 化學（一）', date: new Date('2027-04-10T08:30:00') },
+            { paper: 'Chemistry 2 化學（二）', date: new Date('2027-04-10T11:45:00') }
+        ]
+    },
+    'health': {
+        name: 'Health Management & Social Care 健康管理與社會關懷',
+        englishName: 'Health Management & Social Care',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-11T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-11T11:15:00') }
+        ]
+    },
+    'ict': {
+        name: 'Information & Communication Technology 資訊及通訊科技',
+        englishName: 'ICT',
+        papers: [
+            { paper: 'ICT 1 資訊及通訊科技（一）', date: new Date('2027-04-12T08:30:00') },
+            { paper: 'ICT 2 資訊及通訊科技（二）', date: new Date('2027-04-12T11:15:00') }
+        ]
+    },
+    'biology': {
+        name: 'Biology 生物',
+        englishName: 'Biology',
+        papers: [
+            { paper: 'Biology 1 生物（一）', date: new Date('2027-04-14T08:30:00') },
+            { paper: 'Biology 2 生物（二）', date: new Date('2027-04-14T11:45:00') }
+        ]
+    },
+    'bafs': {
+        name: 'Business, Accounting & Financial Studies 企業、會計與財務概論',
+        englishName: 'BAFS',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-15T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-15T10:15:00') }
+        ]
+    },
+    'physics': {
+        name: 'Physics 物理',
+        englishName: 'Physics',
+        papers: [
+            { paper: 'Physics 1 物理（一）', date: new Date('2027-04-16T08:30:00') },
+            { paper: 'Physics 2 物理（二）', date: new Date('2027-04-16T11:45:00') }
+        ]
+    },
+    'design_tech': {
+        name: 'Design & Applied Technology 設計與應用科技',
+        englishName: 'Design & Applied Technology',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-17T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-17T11:15:00') }
+        ]
+    },
+    'literature': {
+        name: 'Literature in English 英語文學',
+        englishName: 'Literature in English',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-17T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-17T13:30:00') }
+        ]
+    },
+    'chinese_literature': {
+        name: 'Chinese Literature 中國文學',
+        englishName: 'Chinese Literature',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-22T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-22T11:15:00') }
+        ]
+    },
+    'tech_living': {
+        name: 'Technology & Living 科技與生活',
+        englishName: 'Technology & Living',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-22T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-22T10:45:00') }
+        ]
+    },
+    'pe': {
+        name: 'Physical Education 體育',
+        englishName: 'Physical Education',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-23T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-23T11:15:00') }
+        ]
+    },
+    'music': {
+        name: 'Music 音樂',
+        englishName: 'Music',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-23T08:30:00') }
+        ]
+    },
+    'geography': {
+        name: 'Geography 地理',
+        englishName: 'Geography',
+        papers: [
+            { paper: 'Geography 1 地理（一）', date: new Date('2027-04-24T08:30:00') },
+            { paper: 'Geography 2 地理（二）', date: new Date('2027-04-24T12:00:00') }
+        ]
+    },
+    'tourism': {
+        name: 'Tourism & Hospitality Studies 旅遊與款待',
+        englishName: 'Tourism & Hospitality Studies',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-25T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-25T10:45:00') }
+        ]
+    },
+    'history': {
+        name: 'History 歷史',
+        englishName: 'History',
+        papers: [
+            { paper: 'History 1 歷史（一）', date: new Date('2027-04-26T08:30:00') },
+            { paper: 'History 2 歷史（二）', date: new Date('2027-04-26T11:15:00') }
+        ]
+    },
+    'maths_extended': {
+        name: 'Mathematics Extended Part 數學（延伸部分）',
+        englishName: 'Mathematics M1/M2',
+        papers: [
+            { paper: 'Modules 1,2 單元（一）及（二）', date: new Date('2027-04-28T08:30:00') }
+        ]
+    },
+    'chinese_history': {
+        name: 'Chinese History 中國歷史',
+        englishName: 'Chinese History',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-29T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-29T11:30:00') }
+        ]
+    },
+    'economics': {
+        name: 'Economics 經濟',
+        englishName: 'Economics',
+        papers: [
+            { paper: 'Economics 1 經濟（一）', date: new Date('2027-04-30T08:30:00') },
+            { paper: 'Economics 2 經濟（二）', date: new Date('2027-04-30T10:15:00') }
+        ]
+    }
+};
+
+// ── Active year management ────────────────────────────────────
+function loadSavedYear() {
+    return parseInt(localStorage.getItem('dse_active_year') || '2026', 10);
+}
+function saveYear(year) {
+    localStorage.setItem('dse_active_year', String(year));
+}
+
+let activeYear = loadSavedYear();
+let dseExams = activeYear === 2027 ? DSE_EXAMS_2027 : DSE_EXAMS_2026;
+
+function getStudySeasonStart() {
+    return new Date(`${activeYear}-01-01T00:00:00`);
+}
+
+// Returns the % of time elapsed from study season start to the given exam date
+function getExamDatePct(examDate) {
+    const now = new Date();
+    const start = getStudySeasonStart();
+    if (examDate <= start) return 100;
+    const total = examDate.getTime() - start.getTime();
+    const elapsed = now.getTime() - start.getTime();
+    return Math.min(100, Math.max(0, (elapsed / total) * 100));
+}
+
+// Switch active year, reset selected subjects to cores
+function switchYear(year) {
+    activeYear = year;
+    saveYear(year);
+    dseExams = year === 2027 ? DSE_EXAMS_2027 : DSE_EXAMS_2026;
+    selectedSubjects = getCoreSubjects();
+    saveSelectedSubjects(selectedSubjects);
+}
+
+// ── Subject language preference management ───────────────────
+function loadSubjectLanguages() {
+    const saved = localStorage.getItem('dse_subject_languages');
+    if (saved) {
+        try { return JSON.parse(saved); } catch (e) { return {}; }
+    }
+    return {};
+}
+function saveSubjectLanguages(langs) {
+    localStorage.setItem('dse_subject_languages', JSON.stringify(langs));
+}
+// Returns 'eng' or 'chi' for the given subject key
+function getSubjectLang(subjectKey) {
+    // chinese and english subjects always use their default name
+    if (subjectKey === 'chinese' || subjectKey === 'english') return 'default';
+    return subjectLanguages[subjectKey] || 'eng';
+}
+// Returns the display name based on the language setting
+function getSubjectDisplayName(subjectKey) {
+    const subject = dseExams[subjectKey];
+    if (!subject) return '';
+    const lang = getSubjectLang(subjectKey);
+    if (lang === 'chi') {
+        const chinesePart = subject.name.replace(subject.englishName, '').trim();
+        return chinesePart || subject.name;
+    }
+    if (lang === 'eng') return subject.englishName;
+    return subject.name; // 'default' — show full bilingual name
+}
+
+let subjectLanguages = loadSubjectLanguages();
+
 // Encouragement messages in Cantonese
 const encouragementMessages = [
     '加油！你一定得㗎！💪',
@@ -289,12 +550,18 @@ let customDates = loadCustomDates();
 
 // Create subject selection buttons
 function createSubjectButtons() {
+    // Render year selector
+    renderYearSelector();
+
     const container = document.getElementById('subjectButtons');
     container.innerHTML = '';
     
     const coreSubjects = getCoreSubjects();
     
     Object.keys(dseExams).forEach(subjectKey => {
+        const entry = document.createElement('div');
+        entry.className = 'subject-entry';
+
         const button = document.createElement('button');
         button.className = 'subject-btn';
         button.textContent = dseExams[subjectKey].name;
@@ -312,11 +579,7 @@ function createSubjectButtons() {
         }
         
         button.addEventListener('click', () => {
-            // Core subjects cannot be deselected
-            if (isCore) {
-                return;
-            }
-            
+            if (isCore) return;
             const index = selectedSubjects.indexOf(subjectKey);
             if (index > -1) {
                 selectedSubjects.splice(index, 1);
@@ -328,7 +591,29 @@ function createSubjectButtons() {
             saveSelectedSubjects(selectedSubjects);
         });
         
-        container.appendChild(button);
+        entry.appendChild(button);
+
+        // Language toggle for non-chinese, non-english subjects
+        if (subjectKey !== 'chinese' && subjectKey !== 'english') {
+            const currentLang = subjectLanguages[subjectKey] || 'eng';
+            const toggle = document.createElement('div');
+            toggle.className = 'lang-toggle';
+            toggle.innerHTML = `
+                <button class="lang-btn${currentLang === 'eng' ? ' active' : ''}" data-key="${subjectKey}" data-lang="eng">Eng</button>
+                <button class="lang-btn${currentLang === 'chi' ? ' active' : ''}" data-key="${subjectKey}" data-lang="chi">中</button>
+            `;
+            toggle.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    subjectLanguages[subjectKey] = btn.dataset.lang;
+                    saveSubjectLanguages(subjectLanguages);
+                    toggle.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                });
+            });
+            entry.appendChild(toggle);
+        }
+
+        container.appendChild(entry);
     });
 
     // Setup custom date inputs
@@ -339,6 +624,32 @@ function createSubjectButtons() {
             engOralInput.value = customDates.englishOral;
         }
     }
+}
+
+// Render the year selector section inside the settings modal
+function renderYearSelector() {
+    const section = document.getElementById('yearSelectorSection');
+    if (!section) return;
+    section.innerHTML = `
+        <div class="settings-section-title">考試年份 Exam Year</div>
+        <div class="year-selector">
+            <button class="year-btn${activeYear === 2026 ? ' active' : ''}" data-year="2026">2026 DSE</button>
+            <button class="year-btn${activeYear === 2027 ? ' active' : ''}" data-year="2027">2027 DSE ⚠️ Predict</button>
+        </div>
+        ${activeYear === 2027 ? '<p class="year-predict-note">⚠️ 2027 年考試日期尚未公佈，以下日期僅根據 2025 年香港中學文憑考試考試日期推算。</p>' : ''}
+    `;
+    section.querySelectorAll('.year-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const year = parseInt(btn.dataset.year, 10);
+            if (year !== activeYear) {
+                switchYear(year);
+                updatePageTitle();
+                // createSubjectButtons() will re-render yearSelector internally
+                createSubjectButtons();
+                renderPredictedWarning();
+            }
+        });
+    });
 }
 
 // Modal handling
@@ -383,6 +694,8 @@ function initModal() {
         createHeroCountdown();
         createFreedomCountdown();
         createExamProgressSection();
+        renderPredictedWarning();
+        updatePageTitle();
         closeModal();
     }
 
@@ -483,7 +796,7 @@ function createCountdownCard(subjectKey, paper, index) {
     card.innerHTML = `
         <button class="maximize-btn" title="Maximize">⛶</button>
         <div class="card-header">
-            <h3 class="subject-name">${dseExams[subjectKey].name}</h3>
+            <h3 class="subject-name">${getSubjectDisplayName(subjectKey)}</h3>
             <p class="paper-name">${paper.paper}</p>
         </div>
         <div class="exam-date">${formatDate(paper.date)}</div>
@@ -663,11 +976,38 @@ function rotateEncouragement() {
     }, 350);
 }
 
+// Render or hide the predicted-dates warning banner
+function renderPredictedWarning() {
+    const banner = document.getElementById('predictedWarning');
+    if (!banner) return;
+    if (activeYear === 2027) {
+        banner.style.display = '';
+        banner.innerHTML = `
+            <span class="predicted-warning-icon">⚠️</span>
+            <span>2027 年香港中學文憑考試考試日期尚未公佈，以下日期僅根據 2025 年考試日期推算，敬請留意！</span>
+        `;
+    } else {
+        banner.style.display = 'none';
+    }
+}
+
+// Update page title and header based on active year
+function updatePageTitle() {
+    const year = activeYear;
+    document.title = `${year} DSE 倒數計時器`;
+    const titleEl = document.querySelector('.title');
+    if (titleEl) titleEl.textContent = `🎓 ${year} DSE 倒數計時器`;
+    const footerEl = document.querySelector('.footer p');
+    if (footerEl) footerEl.textContent = `© ${year} DSE 倒數計時器 | 努力唔會背叛你 ✨`;
+}
+
 // Initialize the app
 function init() {
     createSubjectButtons();
     initModal();
     initArticleModal();
+    renderPredictedWarning();
+    updatePageTitle();
     createHeroCountdown();
     createFreedomCountdown();
     updateCountdownDisplay();
@@ -744,7 +1084,7 @@ function createHeroCountdown() {
     
     // Animate change if content is different
     const currentSubject = container.querySelector('.hero-subject')?.textContent;
-    if (currentSubject && currentSubject !== firstExam.subject.name) {
+    if (currentSubject && currentSubject !== getSubjectDisplayName(firstExam.subjectKey)) {
         container.style.opacity = '0';
         setTimeout(() => {
             renderHeroContent(container, firstExam, timeRemaining);
@@ -756,11 +1096,11 @@ function createHeroCountdown() {
 }
 
 function renderHeroContent(container, firstExam, timeRemaining) {
-    const stats = getExamStats();
-    const ringHTML = buildHeroProgressRingHTML(stats.seasonPct);
+    const pct = getExamDatePct(firstExam.paper.date);
+    const ringHTML = buildHeroProgressRingHTML(pct);
     container.innerHTML = `
         <div class="hero-title">下一個考試 First Upcoming Exam</div>
-        <div class="hero-subject">${firstExam.subject.name}</div>
+        <div class="hero-subject">${getSubjectDisplayName(firstExam.subjectKey)}</div>
         <div class="hero-paper">${firstExam.paper.paper}</div>
         <div class="hero-countdown-display" data-end="${firstExam.paper.date.toISOString()}">
             <div class="hero-time-unit">
@@ -1241,7 +1581,7 @@ function createExamProgressSection() {
     const dotsHTML = sortedPapers.map((item, i) => {
         const isPast = item.paper.date < now;
         const isNext = i === nextIndex;
-        const subjectName = dseExams[item.key]?.name || '';
+        const subjectName = getSubjectDisplayName(item.key) || '';
         const paperName = item.paper.paper;
         return `<div class="paper-dot ${isPast ? 'done' : ''} ${isNext ? 'next' : ''}"
                      title="${subjectName}: ${paperName}"
@@ -1329,27 +1669,29 @@ function getCardProgress(examDate) {
 
 function getProgressClass(pct) {
     if (pct >= 90) return 'urgent';
-    if (pct >= 70) return 'warning';
-    if (pct >= 45) return 'moderate';
+    if (pct >= 75) return 'warning';
+    if (pct >= 50) return 'moderate';
     return 'ok';
 }
 
 function buildCardProgressHTML(examDate, isPast) {
     if (isPast) return '';
     const { rank, total } = getExamSequenceRank(examDate);
-    const pct = (rank / total) * 100;
+    const pct = getExamDatePct(examDate);
     const cls = getProgressClass(pct);
-    const label = cls === 'urgent'   ? '⚠️ 緊急 Urgent'   :
-                  cls === 'warning'  ? '🔥 注意 Attention' :
-                  cls === 'moderate' ? '📅 進行中'         : '✅ 充裕 Plenty of time';
+    const now = new Date();
+    const daysUntil = Math.ceil((examDate - now) / (1000 * 60 * 60 * 24));
+    const timeLabel = daysUntil <= 0 ? '今日 Today!' :
+                      daysUntil === 1 ? '明日 Tomorrow!' :
+                      `${daysUntil} 日後`;
     return `
         <div class="card-progress-wrap">
             <div class="card-progress-label">
-                <span>考試進度 Exam Progress</span>
-                <span>${label} · Paper ${rank}/${total}</span>
+                <span>第 ${rank} / ${total} 場</span>
+                <span>${timeLabel}</span>
             </div>
             <div class="card-progress-track">
-                <div class="card-progress-bar ${cls}" style="width:${pct}%"></div>
+                <div class="card-progress-bar ${cls}" style="width:${Math.max(pct, 0.5)}%"></div>
             </div>
         </div>`;
 }
@@ -1374,7 +1716,7 @@ function buildHeroProgressRingHTML(pct) {
                     stroke-dashoffset="${dashOffset}" />
             </svg>
             <span class="hero-ring-pct" id="heroRingPct">${Math.round(pct)}%</span>
-            <span class="hero-ring-label">Season</span>
+            <span class="hero-ring-label">進度 %</span>
         </div>`;
 }
 
@@ -1383,12 +1725,22 @@ function buildHeroProgressRingHTML(pct) {
 
 // Update the ring percentage every second
 function updateHeroProgressRing() {
-    const stats   = getExamStats();
-    const pctEl   = document.getElementById('heroRingPct');
-    const fillEl  = document.querySelector('.hero-progress-svg-fill');
-    if (pctEl)  pctEl.textContent = `${Math.round(stats.seasonPct)}%`;
+    const pctEl  = document.getElementById('heroRingPct');
+    const fillEl = document.querySelector('.hero-progress-svg-fill');
+    if (!pctEl && !fillEl) return;
+
+    const heroDisplay = document.querySelector('.hero-countdown-display');
+    let pct = 0;
+    if (heroDisplay && heroDisplay.dataset.end) {
+        const endDate = new Date(heroDisplay.dataset.end);
+        if (!isNaN(endDate.getTime())) {
+            pct = getExamDatePct(endDate);
+        }
+    }
+
+    if (pctEl)  pctEl.textContent = `${Math.round(pct)}%`;
     if (fillEl) {
-        const dashOffset = RING_CIRCUM * (1 - stats.seasonPct / 100);
+        const dashOffset = RING_CIRCUM * (1 - pct / 100);
         fillEl.setAttribute('stroke-dashoffset', dashOffset);
     }
 }
