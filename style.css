@@ -349,6 +349,10 @@ body::before {
     overflow: hidden;
 }
 
+.welcome-modal-content {
+    max-width: 680px;
+}
+
 .modal.show .modal-content {
     transform: translateY(0);
 }
@@ -407,6 +411,39 @@ body::before {
     font-weight: 600;
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: var(--shadow-sm);
+}
+
+.welcome-body {
+    padding-bottom: 22px;
+}
+
+.welcome-lead {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+.welcome-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(236, 72, 153, 0.08));
+    border: 1px solid rgba(79, 70, 229, 0.16);
+    border-radius: 16px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.welcome-copy {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.welcome-footer {
+    justify-content: center;
 }
 
 .save-btn:hover {
@@ -2238,27 +2275,25 @@ body::after {
 
 
 
-/* ── Predicted dates warning banner ──────────────────────── */
-
-.predicted-warning {
+.site-notice {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-    border: 1.5px solid rgba(214, 158, 46, 0.45);
-    border-left: 5px solid #d69e2e;
+    background: linear-gradient(135deg, #ecfeff 0%, #dbeafe 100%);
+    border: 1.5px solid rgba(59, 130, 246, 0.28);
+    border-left: 5px solid #2563eb;
     border-radius: var(--radius-md);
     padding: 14px 20px;
     margin-bottom: 24px;
-    color: #78350f;
+    color: #1e3a8a;
     font-size: 0.95em;
     font-weight: 600;
     line-height: 1.5;
-    box-shadow: 0 2px 12px rgba(214, 158, 46, 0.12);
+    box-shadow: 0 2px 12px rgba(59, 130, 246, 0.10);
     animation: cardEntrance 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.predicted-warning-icon {
+.site-notice-icon {
     font-size: 1.4em;
     flex-shrink: 0;
 }

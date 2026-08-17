@@ -1,10 +1,11 @@
-// DSE 2026 exam schedule (Official timetable revised on 31 October 2025)
-const DSE_EXAMS_2026 = {
+// 2027 DSE exam schedule
+const DSE_YEAR = 2027;
+const DSE_EXAMS = {
     'visual_arts': {
         name: 'Visual Arts 視覺藝術',
         englishName: 'Visual Arts',
         papers: [
-            { paper: '卷一及卷二', date: new Date('2026-04-08T08:30:00') }
+            { paper: '卷一及卷二', date: new Date('2027-04-06T08:30:00') }
         ]
     },
     'chinese': {
@@ -12,8 +13,8 @@ const DSE_EXAMS_2026 = {
         englishName: 'Chinese Language',
         isCore: true,
         papers: [
-            { paper: 'Chinese Language 1 中國語文（一）', date: new Date('2026-04-09T08:30:00') },
-            { paper: 'Chinese Language 2 中國語文（二）', date: new Date('2026-04-09T10:45:00') }
+            { paper: 'Chinese Language 1 中國語文（一）', date: new Date('2027-04-08T08:30:00') },
+            { paper: 'Chinese Language 2 中國語文（二）', date: new Date('2027-04-08T10:45:00') }
         ]
     },
     'english': {
@@ -21,9 +22,9 @@ const DSE_EXAMS_2026 = {
         englishName: 'English Language',
         isCore: true,
         papers: [
-            { paper: 'English Language 1 英國語文（一）', date: new Date('2026-04-10T08:30:00') },
-            { paper: 'English Language 2 英國語文（二）', date: new Date('2026-04-10T11:00:00') },
-            { paper: 'English Language 3 (Listening) 英國語文（三）（聆聽及綜合能力考核）', date: new Date('2026-04-11T09:15:00') }
+            { paper: 'English Language 1 英國語文（一）', date: new Date('2027-04-09T08:30:00') },
+            { paper: 'English Language 2 英國語文（二）', date: new Date('2027-04-09T11:00:00') },
+            { paper: 'English Language 3 (Listening and Integrated Skills) 英國語文（三）（聆聽及綜合能力考核）', date: new Date('2027-04-10T09:15:00') }
         ]
     },
     'maths': {
@@ -31,8 +32,8 @@ const DSE_EXAMS_2026 = {
         englishName: 'Mathematics',
         isCore: true,
         papers: [
-            { paper: 'Mathematics Compulsory Part 1 數學必修部分（一）', date: new Date('2026-04-13T08:30:00') },
-            { paper: 'Mathematics Compulsory Part 2 數學必修部分（二）', date: new Date('2026-04-13T11:30:00') }
+            { paper: 'Mathematics Compulsory Part 1 數學必修部分（一）', date: new Date('2027-04-12T08:30:00') },
+            { paper: 'Mathematics Compulsory Part 2 數學必修部分（二）', date: new Date('2027-04-12T11:30:00') }
         ]
     },
     'cs': {
@@ -40,370 +41,165 @@ const DSE_EXAMS_2026 = {
         englishName: 'Citizenship and Social Development',
         isCore: true,
         papers: [
-            { paper: 'Citizenship and Social Development 公民與社會發展', date: new Date('2026-04-14T08:30:00') }
-        ]
-    },
-    'ethics': {
-        name: 'Ethics & Religious Studies 倫理與宗教',
-        englishName: 'Ethics & Religious Studies',
-        papers: [
-            { paper: '卷一', date: new Date('2026-04-15T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-15T11:00:00') }
-        ]
-    },
-    'chemistry': {
-        name: 'Chemistry 化學',
-        englishName: 'Chemistry',
-        papers: [
-            { paper: 'Chemistry 1 化學（一）', date: new Date('2026-04-16T08:30:00') },
-            { paper: 'Chemistry 2 化學（二）', date: new Date('2026-04-16T11:45:00') }
-        ]
-    },
-    'design_tech': {
-        name: 'Design & Applied Technology 設計與應用科技',
-        englishName: 'Design & Applied Technology',
-        papers: [
-            { paper: '卷一', date: new Date('2026-04-17T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-17T11:15:00') }
-        ]
-    },
-    'literature': {
-        name: 'Literature in English 英語文學',
-        englishName: 'Literature in English',
-        papers: [
-            { paper: '卷一', date: new Date('2026-04-17T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-17T13:30:00') }
+            { paper: 'Citizenship and Social Development 公民與社會發展', date: new Date('2027-04-13T08:30:00') }
         ]
     },
     'health': {
         name: 'Health Management & Social Care 健康管理與社會關懷',
         englishName: 'Health Management & Social Care',
         papers: [
-            { paper: '卷一', date: new Date('2026-04-18T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-18T11:15:00') }
-        ]
-    },
-    'biology': {
-        name: 'Biology 生物',
-        englishName: 'Biology',
-        papers: [
-            { paper: 'Biology 1 生物（一）', date: new Date('2026-04-20T08:30:00') },
-            { paper: 'Biology 2 生物（二）', date: new Date('2026-04-20T11:45:00') }
-        ]
-    },
-    'chinese_literature': {
-        name: 'Chinese Literature 中國文學',
-        englishName: 'Chinese Literature',
-        papers: [
-            { paper: '卷一', date: new Date('2026-04-21T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-21T11:15:00') }
-        ]
-    },
-    'tech_living': {
-        name: 'Technology & Living 科技與生活',
-        englishName: 'Technology & Living',
-        papers: [
-            { paper: '卷一', date: new Date('2026-04-21T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-21T10:45:00') }
-        ]
-    },
-    'physics': {
-        name: 'Physics 物理',
-        englishName: 'Physics',
-        papers: [
-            { paper: 'Physics 1 物理（一）', date: new Date('2026-04-22T08:30:00') },
-            { paper: 'Physics 2 物理（二）', date: new Date('2026-04-22T11:45:00') }
-        ]
-    },
-    'geography': {
-        name: 'Geography 地理',
-        englishName: 'Geography',
-        papers: [
-            { paper: 'Geography 1 地理（一）', date: new Date('2026-04-23T08:30:00') },
-            { paper: 'Geography 2 地理（二）', date: new Date('2026-04-23T12:00:00') }
-        ]
-    },
-    'ict': {
-        name: 'Information & Communication Technology 資訊及通訊科技',
-        englishName: 'ICT',
-        papers: [
-            { paper: 'ICT 1 資訊及通訊科技（一）', date: new Date('2026-04-24T08:30:00') },
-            { paper: 'ICT 2 資訊及通訊科技（二）', date: new Date('2026-04-24T11:15:00') }
-        ]
-    },
-    'history': {
-        name: 'History 歷史',
-        englishName: 'History',
-        papers: [
-            { paper: 'History 1 歷史（一）', date: new Date('2026-04-25T08:30:00') },
-            { paper: 'History 2 歷史（二）', date: new Date('2026-04-25T11:15:00') }
-        ]
-    },
-    'bafs': {
-        name: 'Business, Accounting & Financial Studies 企業、會計與財務概論',
-        englishName: 'BAFS',
-        papers: [
-            { paper: '卷一', date: new Date('2026-04-27T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-27T10:15:00') }
-        ]
-    },
-    'pe': {
-        name: 'Physical Education 體育',
-        englishName: 'Physical Education',
-        papers: [
-            { paper: '卷一', date: new Date('2026-04-28T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-28T11:15:00') }
-        ]
-    },
-    'chinese_history': {
-        name: 'Chinese History 中國歷史',
-        englishName: 'Chinese History',
-        papers: [
-            { paper: '卷一', date: new Date('2026-04-29T08:30:00') },
-            { paper: '卷二', date: new Date('2026-04-29T11:30:00') }
-        ]
-    },
-    'maths_extended': {
-        name: 'Mathematics Extended Part 數學（延伸部分）',
-        englishName: 'Mathematics M1/M2',
-        papers: [
-            { paper: 'Modules 1,2 單元（一）及（二）', date: new Date('2026-04-30T08:30:00') }
-        ]
-    },
-    'tourism': {
-        name: 'Tourism & Hospitality Studies 旅遊與款待',
-        englishName: 'Tourism & Hospitality Studies',
-        papers: [
-            { paper: '卷一', date: new Date('2026-05-02T08:30:00') },
-            { paper: '卷二', date: new Date('2026-05-02T10:45:00') }
-        ]
-    },
-    'economics': {
-        name: 'Economics 經濟',
-        englishName: 'Economics',
-        papers: [
-            { paper: 'Economics 1 經濟（一）', date: new Date('2026-05-04T08:30:00') },
-            { paper: 'Economics 2 經濟（二）', date: new Date('2026-05-04T10:15:00') }
-        ]
-    },
-    'music': {
-        name: 'Music 音樂',
-        englishName: 'Music',
-        papers: [
-            { paper: '1A', date: new Date('2026-05-05T08:30:00') },
-            { paper: '1B', date: new Date('2026-05-05T10:45:00') }
-        ]
-    }
-};
-
-// DSE 2027 Predicted Exam Schedule (Based on 2025 DSE timetable)
-const DSE_EXAMS_2027 = {
-    'visual_arts': {
-        name: 'Visual Arts 視覺藝術',
-        englishName: 'Visual Arts',
-        papers: [
-            { paper: '卷一及卷二', date: new Date('2027-04-01T08:30:00') }
-        ]
-    },
-    'chinese': {
-        name: '中國語文',
-        englishName: 'Chinese Language',
-        isCore: true,
-        papers: [
-            { paper: 'Chinese Language 1 中國語文（一）', date: new Date('2027-04-02T08:30:00') },
-            { paper: 'Chinese Language 2 中國語文（二）', date: new Date('2027-04-02T10:45:00') }
-        ]
-    },
-    'english': {
-        name: 'English Language 英國語文',
-        englishName: 'English Language',
-        isCore: true,
-        papers: [
-            { paper: 'English Language 1 & 2 英國語文（一）及（二）', date: new Date('2027-04-03T08:30:00') },
-            { paper: 'English Language 3 (Listening) 英國語文（三）（聆聽及綜合能力考核）', date: new Date('2027-04-05T09:15:00') }
-        ]
-    },
-    'maths': {
-        name: 'Mathematics 數學（必修部分）',
-        englishName: 'Mathematics',
-        isCore: true,
-        papers: [
-            { paper: 'Mathematics Compulsory Part 數學必修部分', date: new Date('2027-04-07T08:30:00') }
-        ]
-    },
-    'cs': {
-        name: 'Citizenship and Social Development 公民與社會發展',
-        englishName: 'Citizenship and Social Development',
-        isCore: true,
-        papers: [
-            { paper: 'Citizenship and Social Development 公民與社會發展', date: new Date('2027-04-08T08:30:00') }
-        ]
-    },
-    'ethics': {
-        name: 'Ethics & Religious Studies 倫理與宗教',
-        englishName: 'Ethics & Religious Studies',
-        papers: [
-            { paper: '卷一', date: new Date('2027-04-09T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-09T11:00:00') }
+            { paper: '卷一', date: new Date('2027-04-14T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-14T11:15:00') }
         ]
     },
     'chemistry': {
         name: 'Chemistry 化學',
         englishName: 'Chemistry',
         papers: [
-            { paper: 'Chemistry 1 化學（一）', date: new Date('2027-04-10T08:30:00') },
-            { paper: 'Chemistry 2 化學（二）', date: new Date('2027-04-10T11:45:00') }
-        ]
-    },
-    'health': {
-        name: 'Health Management & Social Care 健康管理與社會關懷',
-        englishName: 'Health Management & Social Care',
-        papers: [
-            { paper: '卷一', date: new Date('2027-04-11T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-11T11:15:00') }
-        ]
-    },
-    'ict': {
-        name: 'Information & Communication Technology 資訊及通訊科技',
-        englishName: 'ICT',
-        papers: [
-            { paper: 'ICT 1 資訊及通訊科技（一）', date: new Date('2027-04-12T08:30:00') },
-            { paper: 'ICT 2 資訊及通訊科技（二）', date: new Date('2027-04-12T11:15:00') }
-        ]
-    },
-    'biology': {
-        name: 'Biology 生物',
-        englishName: 'Biology',
-        papers: [
-            { paper: 'Biology 1 生物（一）', date: new Date('2027-04-14T08:30:00') },
-            { paper: 'Biology 2 生物（二）', date: new Date('2027-04-14T11:45:00') }
-        ]
-    },
-    'bafs': {
-        name: 'Business, Accounting & Financial Studies 企業、會計與財務概論',
-        englishName: 'BAFS',
-        papers: [
-            { paper: '卷一', date: new Date('2027-04-15T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-15T10:15:00') }
-        ]
-    },
-    'physics': {
-        name: 'Physics 物理',
-        englishName: 'Physics',
-        papers: [
-            { paper: 'Physics 1 物理（一）', date: new Date('2027-04-16T08:30:00') },
-            { paper: 'Physics 2 物理（二）', date: new Date('2027-04-16T11:45:00') }
-        ]
-    },
-    'design_tech': {
-        name: 'Design & Applied Technology 設計與應用科技',
-        englishName: 'Design & Applied Technology',
-        papers: [
-            { paper: '卷一', date: new Date('2027-04-17T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-17T11:15:00') }
-        ]
-    },
-    'literature': {
-        name: 'Literature in English 英語文學',
-        englishName: 'Literature in English',
-        papers: [
-            { paper: '卷一', date: new Date('2027-04-17T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-17T13:30:00') }
+            { paper: 'Chemistry 1 化學（一）', date: new Date('2027-04-15T08:30:00') },
+            { paper: 'Chemistry 2 化學（二）', date: new Date('2027-04-15T11:45:00') }
         ]
     },
     'chinese_literature': {
         name: 'Chinese Literature 中國文學',
         englishName: 'Chinese Literature',
         papers: [
-            { paper: '卷一', date: new Date('2027-04-22T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-22T11:15:00') }
+            { paper: '卷一', date: new Date('2027-04-07T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-07T11:15:00') }
         ]
     },
     'tech_living': {
         name: 'Technology & Living 科技與生活',
         englishName: 'Technology & Living',
         papers: [
-            { paper: '卷一', date: new Date('2027-04-22T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-22T10:45:00') }
+            { paper: '卷一', date: new Date('2027-04-07T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-07T11:15:00') }
         ]
     },
-    'pe': {
-        name: 'Physical Education 體育',
-        englishName: 'Physical Education',
+    'biology': {
+        name: 'Biology 生物',
+        englishName: 'Biology',
         papers: [
-            { paper: '卷一', date: new Date('2027-04-23T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-23T11:15:00') }
+            { paper: 'Biology 1 生物（一）', date: new Date('2027-04-19T08:30:00') },
+            { paper: 'Biology 2 生物（二）', date: new Date('2027-04-19T11:45:00') }
         ]
     },
-    'music': {
-        name: 'Music 音樂',
-        englishName: 'Music',
+    'design_tech': {
+        name: 'Design & Applied Technology 設計與應用科技',
+        englishName: 'Design & Applied Technology',
         papers: [
-            { paper: '卷一', date: new Date('2027-04-23T08:30:00') }
+            { paper: '卷一', date: new Date('2027-04-20T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-20T11:15:00') }
+        ]
+    },
+    'physics': {
+        name: 'Physics 物理',
+        englishName: 'Physics',
+        papers: [
+            { paper: 'Physics 1 物理（一）', date: new Date('2027-04-21T08:30:00') },
+            { paper: 'Physics 2 物理（二）', date: new Date('2027-04-21T11:45:00') }
         ]
     },
     'geography': {
         name: 'Geography 地理',
         englishName: 'Geography',
         papers: [
-            { paper: 'Geography 1 地理（一）', date: new Date('2027-04-24T08:30:00') },
-            { paper: 'Geography 2 地理（二）', date: new Date('2027-04-24T12:00:00') }
+            { paper: 'Geography 1 地理（一）', date: new Date('2027-04-16T08:30:00') },
+            { paper: 'Geography 2 地理（二）', date: new Date('2027-04-16T12:00:00') }
         ]
     },
-    'tourism': {
-        name: 'Tourism & Hospitality Studies 旅遊與款待',
-        englishName: 'Tourism & Hospitality Studies',
+    'literature': {
+        name: 'Literature in English 英語文學',
+        englishName: 'Literature in English',
         papers: [
-            { paper: '卷一', date: new Date('2027-04-25T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-25T10:45:00') }
+            { paper: '卷一（註 2）', date: new Date('2027-04-20T08:30:00') },
+            { paper: '卷二（註 2）', date: new Date('2027-04-20T13:30:00') }
+        ]
+    },
+    'ict': {
+        name: 'Information & Communication Technology 資訊及通訊科技',
+        englishName: 'ICT',
+        papers: [
+            { paper: 'ICT 1 資訊及通訊科技（一）', date: new Date('2027-04-17T08:30:00') },
+            { paper: 'ICT 2 資訊及通訊科技（二）', date: new Date('2027-04-17T11:15:00') }
+        ]
+    },
+    'bafs': {
+        name: 'Business, Accounting & Financial Studies 企業、會計與財務概論',
+        englishName: 'BAFS',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-26T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-26T10:15:00') }
         ]
     },
     'history': {
         name: 'History 歷史',
         englishName: 'History',
         papers: [
-            { paper: 'History 1 歷史（一）', date: new Date('2027-04-26T08:30:00') },
-            { paper: 'History 2 歷史（二）', date: new Date('2027-04-26T11:15:00') }
+            { paper: 'History 1 歷史（一）', date: new Date('2027-04-27T08:30:00') },
+            { paper: 'History 2 歷史（二）', date: new Date('2027-04-27T11:15:00') }
+        ]
+    },
+    'tourism': {
+        name: 'Tourism & Hospitality Studies 旅遊與款待',
+        englishName: 'Tourism & Hospitality Studies',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-28T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-28T10:45:00') }
         ]
     },
     'maths_extended': {
         name: 'Mathematics Extended Part 數學（延伸部分）',
         englishName: 'Mathematics M1/M2',
         papers: [
-            { paper: 'Modules 1,2 單元（一）及（二）', date: new Date('2027-04-28T08:30:00') }
+            { paper: 'Modules 1,2 單元（一）及（二）', date: new Date('2027-04-23T08:30:00') }
         ]
     },
     'chinese_history': {
         name: 'Chinese History 中國歷史',
         englishName: 'Chinese History',
         papers: [
-            { paper: '卷一', date: new Date('2027-04-29T08:30:00') },
-            { paper: '卷二', date: new Date('2027-04-29T11:30:00') }
+            { paper: '卷一', date: new Date('2027-04-24T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-24T11:30:00') }
+        ]
+    },
+    'ethics': {
+        name: 'Ethics & Religious Studies 倫理與宗教',
+        englishName: 'Ethics & Religious Studies',
+        papers: [
+            { paper: '卷一', date: new Date('2027-04-30T08:30:00') },
+            { paper: '卷二', date: new Date('2027-04-30T11:00:00') }
+        ]
+    },
+    'pe': {
+        name: 'Physical Education 體育',
+        englishName: 'Physical Education',
+        papers: [
+            { paper: '卷一（註 2）', date: new Date('2027-04-29T08:30:00') },
+            { paper: '卷二（註 2）', date: new Date('2027-04-29T11:15:00') }
+        ]
+    },
+    'music': {
+        name: 'Music 音樂',
+        englishName: 'Music',
+        papers: [
+            { paper: '1A & 1B（註 2）', date: new Date('2027-04-29T08:30:00') }
         ]
     },
     'economics': {
         name: 'Economics 經濟',
         englishName: 'Economics',
         papers: [
-            { paper: 'Economics 1 經濟（一）', date: new Date('2027-04-30T08:30:00') },
-            { paper: 'Economics 2 經濟（二）', date: new Date('2027-04-30T10:15:00') }
+            { paper: 'Economics 1 經濟（一）', date: new Date('2027-04-22T08:30:00') },
+            { paper: 'Economics 2 經濟（二）', date: new Date('2027-04-22T10:15:00') }
         ]
     }
 };
 
-// ── Active year management ────────────────────────────────────
-function loadSavedYear() {
-    return parseInt(localStorage.getItem('dse_active_year') || '2026', 10);
-}
-function saveYear(year) {
-    localStorage.setItem('dse_active_year', String(year));
-}
-
-let activeYear = loadSavedYear();
-let dseExams = activeYear === 2027 ? DSE_EXAMS_2027 : DSE_EXAMS_2026;
+let dseExams = DSE_EXAMS;
 
 function getStudySeasonStart() {
-    return new Date(`${activeYear}-01-01T00:00:00`);
+    return new Date(`${DSE_YEAR}-01-01T00:00:00`);
 }
 
 // Returns the % of time elapsed from study season start to the given exam date
@@ -414,15 +210,6 @@ function getExamDatePct(examDate) {
     const total = examDate.getTime() - start.getTime();
     const elapsed = now.getTime() - start.getTime();
     return Math.min(100, Math.max(0, (elapsed / total) * 100));
-}
-
-// Switch active year, reset selected subjects to cores
-function switchYear(year) {
-    activeYear = year;
-    saveYear(year);
-    dseExams = year === 2027 ? DSE_EXAMS_2027 : DSE_EXAMS_2026;
-    selectedSubjects = getCoreSubjects();
-    saveSelectedSubjects(selectedSubjects);
 }
 
 // ── Subject language preference management ───────────────────
@@ -552,9 +339,6 @@ let customDates = loadCustomDates();
 
 // Create subject selection buttons
 function createSubjectButtons() {
-    // Render year selector
-    renderYearSelector();
-
     const container = document.getElementById('subjectButtons');
     container.innerHTML = '';
     
@@ -633,45 +417,6 @@ function createSubjectButtons() {
     }
 }
 
-// Render the year selector section inside the settings modal
-function renderYearSelector() {
-    const section = document.getElementById('yearSelectorSection');
-    if (!section) return;
-    section.innerHTML = `
-        <div class="settings-section-title">考試年份 Exam Year</div>
-        <div class="year-selector">
-            <button class="year-btn${activeYear === 2026 ? ' active' : ''}" data-year="2026">2026 DSE</button>
-            <button class="year-btn${activeYear === 2027 ? ' active' : ''}" data-year="2027">2027 DSE ⚠️ Predicted</button>
-        </div>
-        ${activeYear === 2027 ? '<p class="year-predict-note">⚠️ 2027 年考試日期尚未公佈，以下日期僅根據 2025 年香港中學文憑考試考試日期推算。</p>' : ''}
-        <div class="settings-section-title" style="margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--dash);">外觀主題 Color Theme</div>
-        <div class="theme-selector">
-            ${THEMES.map(t => `<button class="theme-btn${loadThemeId() === t.id ? ' active' : ''}" data-theme="${t.id}" style="--theme-color:${t.accent}">${t.label}</button>`).join('')}
-        </div>
-    `;
-    section.querySelectorAll('.year-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const year = parseInt(btn.dataset.year, 10);
-            if (year !== activeYear) {
-                switchYear(year);
-                updatePageTitle();
-                // createSubjectButtons() will re-render yearSelector internally
-                createSubjectButtons();
-                renderPredictedWarning();
-            }
-        });
-    });
-    section.querySelectorAll('.theme-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const id = btn.dataset.theme;
-            saveThemeId(id);
-            applyTheme(id);
-            section.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-        });
-    });
-}
-
 // Modal handling
 function initModal() {
     const modal = document.getElementById('subjectModal');
@@ -714,7 +459,7 @@ function initModal() {
         createHeroCountdown();
         createFreedomCountdown();
         createExamProgressSection();
-        renderPredictedWarning();
+        renderNotice();
         updatePageTitle();
         closeModal();
     }
@@ -724,6 +469,37 @@ function initModal() {
             closeModal();
         }
     }
+}
+
+function initWelcomeModal() {
+    const modal = document.getElementById('welcomeModal');
+    const closeBtn = document.getElementById('closeWelcomeModal');
+    const actionBtn = document.getElementById('welcomeActionBtn');
+    if (!modal) return;
+
+    const seenKey = 'dse_2027_welcome_seen';
+    const openModal = () => {
+        modal.style.display = 'flex';
+        setTimeout(() => modal.classList.add('show'), 10);
+    };
+    const closeModal = () => {
+        modal.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 300);
+        localStorage.setItem(seenKey, '1');
+    };
+
+    if (!localStorage.getItem(seenKey)) {
+        openModal();
+    }
+
+    if (closeBtn) closeBtn.onclick = closeModal;
+    if (actionBtn) actionBtn.onclick = closeModal;
+
+    window.addEventListener('click', event => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
 }
 
 // Calculate time remaining
@@ -975,7 +751,7 @@ const CONFETTI_COUNT = 14;
 const CARD_ENTRANCE_STAGGER_MS = 60;
 
 // Premium UI — constants for progress bars and sparkles
-const STUDY_SEASON_START = new Date('2026-01-01T00:00:00');
+const STUDY_SEASON_START = new Date('2027-01-01T00:00:00');
 const RING_R              = 26;
 const RING_CIRCUM         = 2 * Math.PI * RING_R; // ≈ 163.4
 const SPARKLE_COLORS      = ['#4F46E5', '#7C3AED', '#EC4899', '#6366F1', '#A78BFA'];
@@ -1027,29 +803,24 @@ function rotateEncouragement() {
     }, 350);
 }
 
-// Render or hide the predicted-dates warning banner
-function renderPredictedWarning() {
-    const banner = document.getElementById('predictedWarning');
+// Render the site announcement banner
+function renderNotice() {
+    const banner = document.getElementById('siteNotice');
     if (!banner) return;
-    if (activeYear === 2027) {
-        banner.style.display = '';
-        banner.innerHTML = `
-            <span class="predicted-warning-icon">⚠️</span>
-            <span>2027 年香港中學文憑考試考試日期尚未公佈，以下日期僅根據 2025 年考試日期推算，敬請留意！</span>
-        `;
-    } else {
-        banner.style.display = 'none';
-    }
+    banner.style.display = '';
+    banner.innerHTML = `
+        <span class="site-notice-icon">🎉</span>
+        <span>恭喜 2026 DSE 同學完成一個重要里程碑！祝你未來順利、保持正能量。</span>
+    `;
 }
 
-// Update page title and header based on active year
+// Update page title and header
 function updatePageTitle() {
-    const year = activeYear;
-    document.title = `${year} DSE 倒數計時器`;
+    document.title = `${DSE_YEAR} DSE 倒數計時器`;
     const titleEl = document.querySelector('.title');
-    if (titleEl) titleEl.textContent = `🎓 ${year} DSE 倒數計時器`;
+    if (titleEl) titleEl.textContent = `🎓 ${DSE_YEAR} DSE 倒數計時器`;
     const footerEl = document.querySelector('.footer p');
-    if (footerEl) footerEl.textContent = `© ${year} DSE 倒數計時器 | 努力唔會背叛你 ✨`;
+    if (footerEl) footerEl.textContent = `© ${DSE_YEAR} DSE 倒數計時器 | 努力唔會背叛你 ✨`;
 }
 
 // Initialize the app
@@ -1057,8 +828,9 @@ function init() {
     applyTheme(loadThemeId());
     createSubjectButtons();
     initModal();
+    initWelcomeModal();
     initArticleModal();
-    renderPredictedWarning();
+    renderNotice();
     updatePageTitle();
     createHeroCountdown();
     createFreedomCountdown();

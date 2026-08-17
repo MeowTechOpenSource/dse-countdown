@@ -1,11 +1,11 @@
-# 2026 DSE 倒數計時器 🎓
+# 2027 DSE 倒數計時器 🎓
 
-A beautiful countdown timer for the 2026 Hong Kong Diploma of Secondary Education (DSE) examinations.
+A beautiful countdown timer for the 2027 Hong Kong Diploma of Secondary Education (DSE) examinations.
 
 ## 功能特色 Features
 
 - ⏰ **即時倒數** - 顯示距離考試嘅日、時、分、秒
-- 📚 **14個科目** - 涵蓋所有主要DSE科目同各卷考試
+- 📚 **2027 考期資訊** - 已將 2027 相關考期資訊整合在此網站，方便查看倒數與科目安排
 - 💾 **自動保存** - 使用 localStorage 保存你選擇嘅科目
 - 📱 **響應式設計** - 手機、平板、電腦都適用
 - ✨ **精美動畫** - 流暢嘅 CSS 動畫效果
@@ -63,6 +63,6 @@ Made with ❤️ for DSE students
 
 ---
 
-**提醒：** 考試日期係根據往年模式估計，正式日期請以考評局公佈為準！
+**提醒：** 2027 考試日期及相關安排已整合於此工具；口試、實習考試與放榜等安排請以學校或相關通知為準。
 
-**Note:** Exam dates are estimated based on previous years. Please refer to HKEAA for official schedule!
+**Note:** Exam dates are provided here作為參考。任何更新或特別安排請以學校或相關單位公布的通知為準。

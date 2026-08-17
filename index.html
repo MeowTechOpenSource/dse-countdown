@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="2026 DSE 倒數計時器 - 追踪您的考試日期">
-    <title>2026 DSE 倒數計時器</title>
+    <meta name="description" content="2027 DSE 倒數計時器 - 倒數與鼓勵，陪你行過每一步">
+    <title>2027 DSE 倒數計時器</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -13,15 +13,15 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="title">🎓 2026 DSE 倒數計時器</h1>
-            <p class="subtitle">努力溫習，成功在望！</p>
+            <h1 class="title">🎓 2027 DSE 倒數計時器</h1>
+            <p class="subtitle">加油！每一步都值得驕傲，繼續前行。</p>
         </header>
 
         <!-- DSE Exam Season Progress Bar -->
         <div class="exam-progress-section" id="examProgressSection"></div>
 
-        <!-- Predicted Dates Warning -->
-        <div id="predictedWarning" class="predicted-warning" style="display:none"></div>
+        <!-- Site notice -->
+        <div id="siteNotice" class="site-notice" style="display:none"></div>
 
         <!-- Hero Countdown for First DSE Written Exam -->
         <div class="hero-countdown" id="heroCountdown">
@@ -50,7 +50,6 @@
                 </div>
                 <!-- ... content ... -->
                 <div class="modal-body">
-                    <div id="yearSelectorSection"></div>
                     <div class="settings-section-title">選擇科目 Select Subjects</div>
                     <div class="subject-buttons" id="subjectButtons"></div>
                     
@@ -67,6 +66,26 @@
                 </div>
                 <div class="modal-footer">
                     <button id="saveBtn" class="save-btn">儲存並開始</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="welcomeModal" class="modal">
+            <div class="modal-content welcome-modal-content">
+                <div class="modal-header">
+                    <h2>恭喜晒 2026 DSE 同學</h2>
+                    <span class="close-modal" id="closeWelcomeModal">&times;</span>
+                </div>
+                <div class="modal-body welcome-body">
+                    <p class="welcome-lead">你已完成咗一個重要里程碑，真係好叻！</p>
+                    <div class="welcome-highlight">
+                        <strong>祝賀：</strong>為你打氣！🎉
+                    </div>
+                    <p class="welcome-copy">無論下一步係乜，記住保持信心同正能量，我哋喺度支持你。</p>
+                    <p class="welcome-copy">按下面按鈕開始使用倒數工具。</p>
+                </div>
+                <div class="modal-footer welcome-footer">
+                    <button id="welcomeActionBtn" class="save-btn">開始吧 • Let’s Go</button>
                 </div>
             </div>
         </div>
@@ -100,7 +119,7 @@
         </div>
 
         <footer class="footer">
-            <p>© 2026 DSE 倒數計時器 | 努力唔會背叛你 ✨</p>
+            <p>© 2027 DSE 倒數計時器 | 努力唔會背叛你 ✨</p>
         </footer>
     </div>
 
